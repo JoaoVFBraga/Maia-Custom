@@ -1,0 +1,12 @@
+.container-carrossel {
+  height: 50px;
+  background-color: var(--preto-principal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-carrossel span {
+  color: white;
+  font-size: 1.6rem;
+}

@@ -1,0 +1,19 @@
+.sobre-nos-container {
+  background-color: var(--cinza-fundo);
+}
+
+.sobre-nos-conteudo {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+}
+
+.sobre-nos-img {
+  max-width: 300px;
+}
+
+.sobre-nos-img img {
+  width: 100%;
+  border-radius: 5px;
+}

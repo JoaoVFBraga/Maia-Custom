@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap');
+
+:root {
+  --preto-principal: rgb(19, 19, 19);
+  --cinza-hover: rgba(202, 202, 202, 0.774);
+  --cinza-fundo: rgb(223, 219, 220)
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Lexend Exa';
+}
