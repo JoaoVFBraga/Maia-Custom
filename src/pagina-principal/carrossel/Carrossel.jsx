@@ -1,10 +1,25 @@
 import './Carrossel.css'
 
-function Carrossel() {
+function Carrossel(props) {
   return (
-    <div>
-      <div className='container-carrossel'>
-        <span>MAIA CUSTOM</span>
+    <div className='carrossel'>
+      <div className={`container-carrossel ${props.tema === 'light' ? 'background-claro' : ''}`}>
+        <div className='container-logo'>
+          <span className={props.tema === 'light' ? 'light' : ''}>MAIA CUSTOM</span>
+          <span className={props.tema === 'light' ? 'light' : ''}>MAIA CUSTOM</span>
+          <span className={props.tema === 'light' ? 'light' : ''}>MAIA CUSTOM</span>
+          <span className={props.tema === 'light' ? 'light' : ''}>MAIA CUSTOM</span>
+          <span className={props.tema === 'light' ? 'light' : ''}>MAIA CUSTOM</span>
+          <span className={props.tema === 'light' ? 'light' : ''}>MAIA CUSTOM</span>
+        </div>
+        <div className='container-logo'>
+          <span className={props.tema === 'light' ? 'light' : ''}>MAIA CUSTOM</span>
+          <span className={props.tema === 'light' ? 'light' : ''}>MAIA CUSTOM</span>
+          <span className={props.tema === 'light' ? 'light' : ''}>MAIA CUSTOM</span>
+          <span className={props.tema === 'light' ? 'light' : ''}>MAIA CUSTOM</span>
+          <span className={props.tema === 'light' ? 'light' : ''}>MAIA CUSTOM</span>
+          <span className={props.tema === 'light' ? 'light' : ''}>MAIA CUSTOM</span>
+        </div>
       </div>
     </div>
   )

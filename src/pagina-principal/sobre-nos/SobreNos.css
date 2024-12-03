@@ -1,5 +1,6 @@
 .sobre-nos-container {
   background-color: var(--cinza-fundo);
+  padding: 50px 0;
 }
 
 .sobre-nos-conteudo {
@@ -7,13 +8,41 @@
   margin: 0 auto;
   padding: 10px;
   display: flex;
+  gap: 50px;
 }
 
 .sobre-nos-img {
-  max-width: 300px;
+  max-width: 450px;
 }
 
 .sobre-nos-img img {
   width: 100%;
   border-radius: 5px;
+}
+
+.sobre-nos-texto h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.sobre-nos-texto p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.sobre-nos-dados {
+  display: flex;
+  gap: 10px;
+}
+
+.dados-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.dados-numeros {
+  font-size: 1.5rem;
+  font-weight: 500;
 }

@@ -1,12 +1,47 @@
+.carrossel {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .container-carrossel {
   height: 50px;
   background-color: var(--preto-principal);
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
-.container-carrossel span {
+.background-claro {
+  background-color: var(--cinza-fundo);
+}
+
+.container-logo {
+  display: inline-block;
+}
+
+.container-logo span {
   color: white;
   font-size: 1.6rem;
+  padding: 0 50px;
+}
+
+.container-logo {
+  animation: slide 25s infinite linear;
+}
+
+.carrossel:hover .container-logo {
+  animation-play-state: paused;
+}
+
+.container-logo .light {
+  color: var(--preto-principal);
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
 }
