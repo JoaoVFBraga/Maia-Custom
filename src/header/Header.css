@@ -55,6 +55,7 @@
   font-size: 2rem;
   font-weight: 300;
   color: var(--preto-principal);
+  cursor: pointer;
 }
 
 .nav-servicos li button {

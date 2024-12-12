@@ -1,6 +1,12 @@
 import './Servicos.css'
 
-function Servicos() {
+function Servicos(props) {
+
+  const exibeRestaurar = () => {
+    props.setExibePaginaPrincipal(false);
+    props.setExibeRestauracao(true);
+  }
+
   return (
     <div className='servicos-container'>
       <div className='servicos-conteudo'>
@@ -11,7 +17,7 @@ function Servicos() {
             <div className='container-cards'>
               <h4>Restauração</h4>
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae tempora voluptas distinctio, consectetur doloremque voluptatum error voluptatibus nihil non amet, provident a officiis quasi? Veniam facilis eaque nisi commodi voluptate?</p>
-              <button>Restaurar</button>
+              <button onClick={exibeRestaurar}>Restaurar</button>
             </div>
             <div className='container-cards'>
               <h4>Criação</h4>

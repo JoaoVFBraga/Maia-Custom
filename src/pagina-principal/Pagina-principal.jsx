@@ -4,13 +4,13 @@ import Intro from './intro/Intro.jsx'
 import Servicos from './servicos/Servicos.jsx'
 import SobreNos from './sobre-nos/SobreNos.jsx'
 
-function PaginaPrincipal() {
+function PaginaPrincipal(props) {
   return (
     <div>
       <Intro />
       <Carrossel />
       <SobreNos />
-      <Servicos />
+      <Servicos setExibePaginaPrincipal={props.setExibePaginaPrincipal} setExibeRestauracao={props.setExibeRestauracao} />
       <Carrossel tema={'light'} />
     </div>
   )

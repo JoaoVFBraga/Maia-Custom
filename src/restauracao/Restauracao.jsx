@@ -1,43 +1,69 @@
 import { useState } from 'react';
 import './Restauracao.css'
 
-export default function Restauracao() {
+export default function Restauracao(props) {
+
+  const fechaRestaurar = () => {
+    props.setExibePaginaPrincipal(true);
+    props.setExibeRestauracao(false);
+  }
 
   const tabelaDePrecos = {
     'camisa': {
       restauracao: 10,
       customizacao: 20,
-      criacao: 30
+      criacao: 30,
+      maodeobra: 20,
+      material: 50,
+      frete: 10
     },
     'camiseta': {
       restauracao: 10,
       customizacao: 20,
-      criacao: 30
+      criacao: 30,
+      maodeobra: 20,
+      material: 50,
+      frete: 10
     },
     'blusa': {
       restauracao: 10,
       customizacao: 20,
-      criacao: 30
+      criacao: 30,
+      maodeobra: 20,
+      material: 50,
+      frete: 10
     },
     'vestido': {
       restauracao: 10,
       customizacao: 20,
-      criacao: 30
+      criacao: 30,
+      maodeobra: 20,
+      material: 50,
+      frete: 10
     },
     'saia': {
       restauracao: 10,
       customizacao: 20,
-      criacao: 30
+      criacao: 30,
+      maodeobra: 20,
+      material: 50,
+      frete: 10
     },
     'calça': {
       restauracao: 10,
       customizacao: 20,
-      criacao: 30
+      criacao: 30,
+      maodeobra: 20,
+      material: 50,
+      frete: 10
     },
     'short': {
       restauracao: 10,
       customizacao: 20,
-      criacao: 30
+      criacao: 30,
+      maodeobra: 20,
+      material: 50,
+      frete: 10
     },
   }
 
@@ -68,7 +94,7 @@ export default function Restauracao() {
     if (tipo === '' | servico === '' | descricao === '') {
       alert('Preencha todos os campos')
     } else {
-      setValorTotal(tabelaDePrecos[tipo][servico]);
+      setValorTotal(tabelaDePrecos[tipo][servico] + tabelaDePrecos[tipo].material + tabelaDePrecos[tipo].frete);
       setFormulario(false);
       setConfirmaFormulario(true);
     }
@@ -121,7 +147,11 @@ export default function Restauracao() {
         }
         {confirmaFormulario ?
           <div className='confirmacao-restauracao'>
+            <h3>Valores</h3>
             <div className='container-valor'>
+              <span className='valor-unitario'>Materiais: R${tabelaDePrecos[tipo].material}</span>
+              <span className='valor-unitario'>Mão de obra: R${tabelaDePrecos[tipo][servico]}</span>
+              <span className='valor-unitario'>Frete: R${tabelaDePrecos[tipo].frete}</span>
               <h3>Valor Total: </h3>
               <span className='valor-total'>R$ {valorTotal}</span>
             </div>
@@ -132,10 +162,10 @@ export default function Restauracao() {
           </div> : null
         }
         {agradecimento ?
-          <div className='confirmacao-restauracao agreadecimento-restauracao'>
+          <div className='confirmacao-restauracao agradecimento-restauracao'>
             <h3>Agradeçemos a confiança!</h3>
             <p>Um dos nossos atendentes entrará em contato para finalizar o atendimento</p>
-            <button>Finalizar</button>
+            <button className='btn-orcamento' onClick={fechaRestaurar}>Finalizar</button>
           </div> : null
         }
       </div>

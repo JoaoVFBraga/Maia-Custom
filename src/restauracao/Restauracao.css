@@ -124,7 +124,7 @@
   height: 450px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 10px;
   border: 2px solid var(--preto-principal);
@@ -134,15 +134,24 @@
   background-color: var(--cinza-hover);
 }
 
-.confirmacao-restauracao h3 {
+.confirmacao-restauracao>h3 {
   font-size: 2rem;
   font-weight: 300;
+  text-transform: uppercase;
 }
 
 .container-valor {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.container-valor h3 {
+  margin-top: 25px;
+}
+
+.valor-unitario {
+  margin-bottom: 5px;
 }
 
 .valor-total {
@@ -154,7 +163,13 @@
   display: flex;
   align-items: center;
   gap: 25px;
-  margin-top: 50px;
 }
 
-.agradecimento-restauracao {}
+.agradecimento-restauracao {
+  padding: 80px 0;
+}
+
+.agradecimento-restauracao p {
+  font-size: 1.3rem;
+  text-align: center;
+}
