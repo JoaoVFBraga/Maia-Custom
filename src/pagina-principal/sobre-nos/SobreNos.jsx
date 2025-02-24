@@ -2,7 +2,7 @@ import './SobreNos.css'
 
 function SobreNos() {
   return (
-    <div className='sobre-nos-container'>
+    <div className='sobre-nos-container' id='sobrenos'>
       <div className='sobre-nos-conteudo'>
         <div className='sobre-nos-img'>
           <img src="/img/primeira-pagina/vestido-azul.jpg" alt="" />

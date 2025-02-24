@@ -2,7 +2,7 @@ import './Footer.css'
 
 function Footer() {
   return (
-    <div className='container-footer'>
+    <div className='container-footer' id='contato'>
       <h4 className='logo-footer'>MAIA CUSTOM</h4>
       <div className='contatos-container'>
         <h4>Redes Sociais</h4>
