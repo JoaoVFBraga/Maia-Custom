@@ -1,0 +1,31 @@
+.criacao-background {
+    width: 100%;
+    height: 100%;
+    background-color: var(--cinza-fundo);
+    color: var(--preto-background);
+    padding-top: 150px;
+}
+
+.criacao-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.criacao-container>h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.criacao-container>p {
+    margin-bottom: 30px;
+}
+
+.orcamento-criacao {
+    font-size: 1.8rem;
+    margin: 25px 0 50px 0;
+}
