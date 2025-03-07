@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './Header.css'
 
 function Header(props) {
@@ -12,6 +13,16 @@ function Header(props) {
     props.setExibeRestauracao(false);
   }
 
+  const controlaLogin = () => {
+    if (exibeLogin === false) {
+      setExibeLogin(true)
+    } else {
+      setExibeLogin(false)
+    }
+  }
+
+  const [exibeLogin, setExibeLogin] = useState(false)
+
   return (
     <header className='header'>
       <nav className='header-nav'>
@@ -24,6 +35,14 @@ function Header(props) {
         <ul className='nav-servicos'>
           <li><button onClick={exibeRestaurar}>Restaure uma peça</button></li>
           <li><button>Crie uma peça</button></li>
+          <li id='botao-login' onClick={controlaLogin}><button><img src="/img/icones/icone-usuario.png" alt="" />Entrar</button></li>
+          {exibeLogin ? 
+          <div className='lista-login'>
+            <div>Sou cliente <img src="/img/icones/seta-direita.png" alt="" /></div>
+            <div>Sou costureira <img src="/img/icones/seta-direita.png" alt="" /></div>
+          </div> : null
+        }
+          
         </ul>
       </nav>
     </header>

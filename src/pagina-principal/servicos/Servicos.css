@@ -21,11 +21,12 @@
 .servicos-p {
   font-size: 1.5rem;
   font-weight: 300;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
 }
 
-.flex-cards {
-  display: flex;
+.grid-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 25px;
 }
 
@@ -33,6 +34,8 @@
   border: 2px solid var(--cinza-fundo);
   border-radius: 10px;
   padding: 10px 25px;
+  display: flex;
+  flex-direction: column;
 }
 
 .container-cards h4 {
@@ -55,6 +58,7 @@
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
+  margin-top: auto;
 }
 
 .container-cards button:hover {

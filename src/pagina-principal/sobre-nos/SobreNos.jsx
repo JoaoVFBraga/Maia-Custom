@@ -14,16 +14,16 @@ function SobreNos() {
           </p>
           <div className='sobre-nos-dados'>
             <div className='dados-container'>
-              <span className='dados-numeros'>92 milhões.</span>
-              <span className='dados-descricao'>Dos 100 bilhões de peças de vestuário produzidas a cada ano, 92 milhões de toneladas acabam em aterros sanitários.</span>
+              <span className='dados-numeros'>92 milhões</span>
+              <span className='dados-descricao'>Dos 100 bilhões de peças de vestuário produzidas a cada ano, acabam em aterros sanitários.</span>
             </div>
             <div className='dados-container'>
-              <span className='dados-numeros'>35% em apenas 15 anos.</span>
-              <span className='dados-descricao'>Atualmente, muitos itens são usados ​​apenas de sete a dez vezes antes de serem jogados fora. Isso é um declínio de mais de 35% em apenas 15 anos.</span>
+              <span className='dados-numeros'>De 7 a 10 vezes</span>
+              <span className='dados-descricao'>É o número de vezes que muitos itens são usados antes de serem jogados fora. Isso é um declínio de mais de 35% em apenas 15 anos.</span>
             </div>
             <div className='dados-container'>
-              <span className='dados-numeros'>20% das águas residuais globais.</span>
-              <span className='dados-descricao'>Tingimento e acabamento são responsáveis ​​por 3% das emissões globais de CO2, bem como por mais de 20% da poluição global da água.</span>
+              <span className='dados-numeros'>20% da poluição</span>
+              <span className='dados-descricao'>Global da água se deve ao tingimento e acabamento das roupas</span>
             </div>
           </div>
         </div>

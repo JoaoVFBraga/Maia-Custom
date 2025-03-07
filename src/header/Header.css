@@ -58,6 +58,10 @@
   cursor: pointer;
 }
 
+.nav-servicos {
+  position: relative;
+}
+
 .nav-servicos li button {
   background: none;
   font-size: 0.95rem;
@@ -72,4 +76,56 @@
 .nav-servicos li button:hover {
   background-color: var(--cinza-hover);
   transition: 0.3s;
+}
+
+#botao-login button {
+  background-color: var(--preto-principal);
+  color: var(--cinza-fundo);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+#botao-login img {
+  max-width: 15px;
+}
+
+#botao-login button:hover {
+  background-color: rgb(43, 43, 43);
+  border-color: rgb(43, 43, 43);
+}
+
+.lista-login {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: -80px;
+  right: 0;
+  max-height: max-content;
+  align-items: center;
+  border: 2px solid var(--preto-principal);
+  border-radius: 10px;
+  background-color: var(--cinza-fundo);
+}
+
+.lista-login div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.lista-login div:hover {
+  background-color: var(--cinza-hover);
+}
+
+.lista-login div:first-child {
+  border-bottom: 2px solid var(--preto-principal);
+  border-radius: 7px 7px 0 0;
+}
+
+.lista-login div:last-child {
+  border-radius: 0 0 7px 7px;
 }

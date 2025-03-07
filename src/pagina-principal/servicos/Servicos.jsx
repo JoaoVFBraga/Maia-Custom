@@ -13,12 +13,12 @@ function Servicos(props) {
         <div className='servicos-texto'>
           <h3>SERVIÇOS</h3>
           <p className='servicos-p'>Na MAIA CUSTOM, cada peça é tratada com cuidado e dedicação, contribuindo para um futuro mais sustentável e para o fortalecimento da nossa comunidade local.</p>
-          <div className='flex-cards'>
+          <div className='grid-cards'>
             <div className='container-cards'>
               <h4>Restauração/Customização</h4>
               <p>Conserto de costuras, ajustes no caimento, troca de zíper ou botões,
-Correção de danos, como rasgos, desgastes, manchas ou desbotamento,
-reparo de tecidos danificados. Garantindo que a peça volte a ser funcional e confortável.</p>
+              Correção de danos, como rasgos, desgastes, manchas ou desbotamento,
+              reparo de tecidos danificados. Garantindo que a peça volte a ser funcional e confortável.</p>
               <button onClick={exibeRestaurar}>Restaurar</button>
             </div>
             <div className='container-cards'>
