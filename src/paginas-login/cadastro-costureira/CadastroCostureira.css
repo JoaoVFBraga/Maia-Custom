@@ -1,0 +1,47 @@
+.cadastro-costureira-container {
+    display: grid;
+    grid-template-columns: 1.6fr 2fr;
+    max-width: 1000px;
+}
+
+.cadastro-lado-esquerdo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px;
+    text-align: center;
+}
+
+.cadastro-lado-esquerdo h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.cadastro-lado-esquerdo p {
+    font-size: 1.2rem;
+}
+
+.cadastro-lado-direito form {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: var(--preto-principal);
+    padding: 30px 40px;
+}
+
+.cadastro-lado-direito label {
+    font-size: 1.3rem;
+}
+
+.cadastro-lado-direito form input,
+.cadastro-lado-direito form select {
+    margin: 2px 0 10px 0;
+    font-size: 1rem;
+    padding: 3px 3px;
+}
+
+.cadastro-lado-direito form input {
+    outline: none;
+    border: none;
+}
