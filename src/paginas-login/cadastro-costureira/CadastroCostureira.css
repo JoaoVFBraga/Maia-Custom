@@ -2,6 +2,8 @@
     display: grid;
     grid-template-columns: 1.6fr 2fr;
     max-width: 1000px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.315);
+    border-radius: 10px;
 }
 
 .cadastro-lado-esquerdo {
@@ -11,15 +13,24 @@
     justify-content: center;
     padding: 10px 25px;
     text-align: center;
+    background-color: white;
+    border-radius: 10px 0 0 10px;
+    gap: 25px;
 }
 
 .cadastro-lado-esquerdo h2 {
     font-size: 2rem;
-    margin-bottom: 10px;
 }
 
 .cadastro-lado-esquerdo p {
     font-size: 1.2rem;
+}
+
+.cadastro-lado-esquerdo .botaoDeLogin {
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 2px solid black;
 }
 
 .cadastro-lado-direito form {
@@ -28,7 +39,12 @@
     color: white;
     background-color: var(--preto-principal);
     padding: 30px 40px;
+    border-radius: 0 10px 10px 0;
 }
+
+/* .cadastro-lado-direito {
+    border-radius: 0 10px 10px 0;
+} */
 
 .cadastro-lado-direito label {
     font-size: 1.3rem;
@@ -44,4 +60,47 @@
 .cadastro-lado-direito form input {
     outline: none;
     border: none;
+}
+
+.botoes-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.botoes-login .voltar {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 3px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.botoes-login .voltar:hover {
+    scale: 1.1;
+    transition: 0.5s;
+}
+
+.botoes-login .confirmar {
+    border: 2px solid white;
+    background-color: white;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 5px 15px;
+    color: var(--preto-principal);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+.botoes-login .confirmar:hover {
+    background-color: var(--preto-principal);
+    color: white;
+    transition: 0.5s;
 }

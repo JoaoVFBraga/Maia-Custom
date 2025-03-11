@@ -11,6 +11,14 @@ function Header(props) {
   const voltaAoInicio = () => {
     props.setExibePaginaPrincipal(true);
     props.setExibeRestauracao(false);
+    props.setExibeLogin(false);
+  }
+
+  const abrePaginaDeLogin = () => {
+    props.setExibePaginaPrincipal(false);
+    props.setExibeRestauracao(false);
+    props.setExibeLogin(true);
+    setExibeLogin(false);
   }
 
   const controlaLogin = () => {
@@ -19,6 +27,14 @@ function Header(props) {
     } else {
       setExibeLogin(false)
     }
+  }
+
+  const defineCliente = () => {
+    props.setTipoDeLogin('cliente')
+  }
+
+  const defineCostureira = () => {
+    props.setTipoDeLogin('costureira')
   }
 
   const [exibeLogin, setExibeLogin] = useState(false)
@@ -36,13 +52,19 @@ function Header(props) {
           <li><button onClick={exibeRestaurar}>Restaure uma peça</button></li>
           <li><button>Crie uma peça</button></li>
           <li id='botao-login' onClick={controlaLogin}><button><img src="/img/icones/icone-usuario.png" alt="" />Entrar</button></li>
-          {exibeLogin ? 
-          <div className='lista-login'>
-            <div>Sou cliente <img src="/img/icones/seta-direita.png" alt="" /></div>
-            <div>Sou costureira <img src="/img/icones/seta-direita.png" alt="" /></div>
-          </div> : null
-        }
-          
+          {exibeLogin ?
+            <div className='lista-login'>
+              <div onClick={() => {
+                abrePaginaDeLogin();
+                defineCliente();
+              }}>Sou cliente <img src="/img/icones/seta-direita.png" alt="" /></div>
+              <div onClick={() => {
+                abrePaginaDeLogin();
+                defineCostureira();
+              }}>Sou costureira <img src="/img/icones/seta-direita.png" alt="" /></div>
+            </div> : null
+          }
+
         </ul>
       </nav>
     </header>
