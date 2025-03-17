@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Restauracao.css'
+import Costureira from './Costureira/Costureira';
 
 export default function Restauracao(props) {
 
@@ -75,7 +76,7 @@ export default function Restauracao(props) {
   const [formulario, setFormulario] = useState(true);
   const [confirmaFormulario, setConfirmaFormulario] = useState(false);
   const [agradecimento, setAgradecimento] = useState(false);
-  const [valorTotal, setValorTotal] = useState(0)
+  const [valorTotal, setValorTotal] = useState(0);
 
   const mudaTipo = (e) => {
     setTipo(e.target.id);
@@ -142,6 +143,26 @@ export default function Restauracao(props) {
             </div>
             <p>3- Descreva como deseja que o serviço seja feito:</p>
             <textarea className='area-de-texto' onChange={mudaDescricao}></textarea>
+            <p>4- Selecione a costureira da sua preferência:</p>
+            {servico === 'restauracao' ?
+              <div className='container-costureiras'>
+                <Costureira NumCostureira={'1'} />
+                <Costureira NumCostureira={'2'} />
+                <Costureira NumCostureira={'3'} />
+                <Costureira NumCostureira={'4'} />
+                <Costureira NumCostureira={'5'} />
+              </div> : null
+            }
+            {servico === 'customizacao' ?
+              <div className='container-costureiras'>
+                <Costureira NumCostureira={'6'} />
+                <Costureira NumCostureira={'7'} />
+                <Costureira NumCostureira={'8'} />
+                <Costureira NumCostureira={'9'} />
+                <Costureira NumCostureira={'10'} />
+              </div> : null
+            }
+
             <button className='btn-orcamento'>Fazer orçamento</button>
           </form> : null
         }

@@ -23,7 +23,6 @@
 
 .formulario-restauracao {
   width: 700px;
-  height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,6 +84,13 @@
   outline: none;
   padding: 5px;
   font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.container-costureiras {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
 }
 
 .btn-orcamento {
