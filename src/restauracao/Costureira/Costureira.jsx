@@ -1,6 +1,7 @@
+import { useState } from "react";
 import "./Costureira.css";
 
-export default function Costureira({ NumCostureira }) {
+export default function Costureira({ NumCostureira, selecionada, setSelecionada }) {
 
     const dadosCostureiras = {
         costureira1: {
@@ -80,13 +81,17 @@ export default function Costureira({ NumCostureira }) {
         },
     }
 
-    const costureira = dadosCostureiras[`costureira${NumCostureira}`]
+    const costureira = dadosCostureiras[`costureira${NumCostureira}`];
+
+    const handleChange = () => {
+        setSelecionada(costureira.id.toString());
+    }
 
     return (
-        <div className='costureira-radio'>
+        <div className={`costureira-radio ${selecionada === costureira.id.toString() ? 'ativa' : ''}`} onClick={handleChange}>
             <label htmlFor={`costureira-${costureira.id}`}>{costureira.nome}</label>
             <picture><img src={costureira.foto} alt="Foto de perfil" /></picture>
-            <input type="radio" name="costureira" id={`costureira-${costureira.id}`} />
+            <input type="radio" name="costureira" id={`costureira-${costureira.id}`} value={costureira.id} checked={selecionada === costureira.id.toString()} onChange={handleChange} />
         </div>
     )
 }

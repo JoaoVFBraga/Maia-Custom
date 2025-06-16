@@ -13,17 +13,19 @@ function App() {
   const [exibeRestauracao, setExibeRestauracao] = useState(false)
   const [exibeLogin, setExibeLogin] = useState(false)
   const [tipoDeLogin, setTipoDeLogin] = useState('')
+  const [exibeCriacao, setExibeCriacao] = useState(false)
 
   return (
     <div>
-      <Header setExibePaginaPrincipal={setExibePaginaPrincipal} setExibeRestauracao={setExibeRestauracao} exibePaginaPrincipal={exibePaginaPrincipal} setTipoDeLogin={setTipoDeLogin} setExibeLogin={setExibeLogin} />
+      <Header setExibePaginaPrincipal={setExibePaginaPrincipal} setExibeRestauracao={setExibeRestauracao} exibePaginaPrincipal={exibePaginaPrincipal} setTipoDeLogin={setTipoDeLogin} setExibeLogin={setExibeLogin} setExibeCriacao={setExibeCriacao} />
 
-      {exibePaginaPrincipal ? <PaginaPrincipal setExibePaginaPrincipal={setExibePaginaPrincipal} setExibeRestauracao={setExibeRestauracao} /> : null}
+      {exibePaginaPrincipal ? <PaginaPrincipal setExibePaginaPrincipal={setExibePaginaPrincipal} setExibeRestauracao={setExibeRestauracao} setExibeCriacao={setExibeCriacao} /> : null}
 
       {exibeRestauracao ? <Restauracao setExibePaginaPrincipal={setExibePaginaPrincipal} setExibeRestauracao={setExibeRestauracao} /> : null}
 
+      {exibeCriacao ? <Criacao setExibePaginaPrincipal={setExibePaginaPrincipal} setExibeCriacao={setExibeCriacao} /> : null}
+
       {exibeLogin ? <PaginasLogin tipoDeLogin={tipoDeLogin} setTipoDeLogin={setTipoDeLogin} setExibePaginaPrincipal={setExibePaginaPrincipal} setExibeLogin={setExibeLogin} /> : null}
-      {/* <Criacao /> */}
       <Footer />
     </div>
   )

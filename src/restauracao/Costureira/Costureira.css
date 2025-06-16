@@ -2,19 +2,44 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 5px;
-    background-color: white;
+    background-color: var(--cinza-fundo);
+    border: 2px solid var(--preto-principal);
     padding: 5px;
     border-radius: 5px;
     width: 120px;
+    height: 150px;
+    cursor: pointer;
+}
+
+.costureira-radio:not(.ativa):hover {
+    background-color: var(--cinza-hover);
+    transition: 0.3s;
 }
 
 .costureira-radio label {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 3px 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 
 .costureira-radio picture img {
-    max-width: 60px;
+    max-width: 85px;
     border-radius: 50%;
+    border: 2px solid var(--preto-principal);
+    justify-self: self-end;
+}
+
+.costureira-radio input {
+    display: none;
+}
+
+.ativa {
+    background-color: rgb(156, 156, 156);
+    transition: 0.3s;
 }

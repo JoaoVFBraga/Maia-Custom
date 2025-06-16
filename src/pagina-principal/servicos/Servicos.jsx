@@ -7,6 +7,11 @@ function Servicos(props) {
     props.setExibeRestauracao(true);
   }
 
+  const exibeCriacao = () => {
+    props.setExibePaginaPrincipal(false);
+    props.setExibeCriacao(true);
+  }
+
   return (
     <div className='servicos-container' id='servicos'>
       <div className='servicos-conteudo'>
@@ -17,14 +22,14 @@ function Servicos(props) {
             <div className='container-cards'>
               <h4>Restauração/Customização</h4>
               <p>Conserto de costuras, ajustes no caimento, troca de zíper ou botões,
-              Correção de danos, como rasgos, desgastes, manchas ou desbotamento,
-              reparo de tecidos danificados. Garantindo que a peça volte a ser funcional e confortável.</p>
+                Correção de danos, como rasgos, desgastes, manchas ou desbotamento,
+                reparo de tecidos danificados. Garantindo que a peça volte a ser funcional e confortável.</p>
               <button onClick={exibeRestaurar}>Restaurar</button>
             </div>
             <div className='container-cards'>
               <h4>Criação</h4>
               <p>Desenvolvemos uma peça única e exclusiva, totalmente personalizada para você. Cada detalhe é cuidadosamente descrito e desenhado de acordo com suas preferências e necessidades. Para garantir um entendimento completo do projeto, você poderá anexar imagens ao desenho, tornando o processo ainda mais claro e preciso.</p>
-              <button>Criar</button>
+              <button onClick={exibeCriacao}>Criar</button>
             </div>
           </div>
         </div>

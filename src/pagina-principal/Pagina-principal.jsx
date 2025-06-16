@@ -10,7 +10,7 @@ function PaginaPrincipal(props) {
       <Intro />
       <Carrossel />
       <SobreNos />
-      <Servicos setExibePaginaPrincipal={props.setExibePaginaPrincipal} setExibeRestauracao={props.setExibeRestauracao} />
+      <Servicos setExibePaginaPrincipal={props.setExibePaginaPrincipal} setExibeRestauracao={props.setExibeRestauracao} setExibeCriacao={props.setExibeCriacao} />
       <Carrossel tema={'light'} />
     </div>
   )

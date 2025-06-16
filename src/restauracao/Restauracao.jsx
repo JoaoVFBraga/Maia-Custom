@@ -7,6 +7,7 @@ export default function Restauracao(props) {
   const fechaRestaurar = () => {
     props.setExibePaginaPrincipal(true);
     props.setExibeRestauracao(false);
+    props.setExibeCriacao(false);
   }
 
   const tabelaDePrecos = {
@@ -77,6 +78,7 @@ export default function Restauracao(props) {
   const [confirmaFormulario, setConfirmaFormulario] = useState(false);
   const [agradecimento, setAgradecimento] = useState(false);
   const [valorTotal, setValorTotal] = useState(0);
+  const [costureiraSelecionada, setCostureiraSelecionada] = useState('');
 
   const mudaTipo = (e) => {
     setTipo(e.target.id);
@@ -143,23 +145,23 @@ export default function Restauracao(props) {
             </div>
             <p>3- Descreva como deseja que o serviço seja feito:</p>
             <textarea className='area-de-texto' onChange={mudaDescricao}></textarea>
-            <p>4- Selecione a costureira da sua preferência:</p>
+            {servico === 'restauracao' || servico === 'customizacao' ? <p>4- Selecione a costureira da sua preferência:</p> : null}
             {servico === 'restauracao' ?
               <div className='container-costureiras'>
-                <Costureira NumCostureira={'1'} />
-                <Costureira NumCostureira={'2'} />
-                <Costureira NumCostureira={'3'} />
-                <Costureira NumCostureira={'4'} />
-                <Costureira NumCostureira={'5'} />
+                <Costureira NumCostureira={'1'} selecionada={costureiraSelecionada} setSelecionada={setCostureiraSelecionada} />
+                <Costureira NumCostureira={'2'} selecionada={costureiraSelecionada} setSelecionada={setCostureiraSelecionada} />
+                <Costureira NumCostureira={'3'} selecionada={costureiraSelecionada} setSelecionada={setCostureiraSelecionada} />
+                <Costureira NumCostureira={'4'} selecionada={costureiraSelecionada} setSelecionada={setCostureiraSelecionada} />
+                <Costureira NumCostureira={'5'} selecionada={costureiraSelecionada} setSelecionada={setCostureiraSelecionada} />
               </div> : null
             }
             {servico === 'customizacao' ?
               <div className='container-costureiras'>
-                <Costureira NumCostureira={'6'} />
-                <Costureira NumCostureira={'7'} />
-                <Costureira NumCostureira={'8'} />
-                <Costureira NumCostureira={'9'} />
-                <Costureira NumCostureira={'10'} />
+                <Costureira NumCostureira={'6'} selecionada={costureiraSelecionada} setSelecionada={setCostureiraSelecionada} />
+                <Costureira NumCostureira={'7'} selecionada={costureiraSelecionada} setSelecionada={setCostureiraSelecionada} />
+                <Costureira NumCostureira={'8'} selecionada={costureiraSelecionada} setSelecionada={setCostureiraSelecionada} />
+                <Costureira NumCostureira={'9'} selecionada={costureiraSelecionada} setSelecionada={setCostureiraSelecionada} />
+                <Costureira NumCostureira={'10'} selecionada={costureiraSelecionada} setSelecionada={setCostureiraSelecionada} />
               </div> : null
             }
 

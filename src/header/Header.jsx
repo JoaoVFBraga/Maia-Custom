@@ -6,18 +6,29 @@ function Header(props) {
   const exibeRestaurar = () => {
     props.setExibePaginaPrincipal(false);
     props.setExibeRestauracao(true);
+    props.setExibeCriacao(false);
+    props.setExibeLogin(false);
+  }
+
+  const exibeCriacao = () => {
+    props.setExibePaginaPrincipal(false);
+    props.setExibeCriacao(true);
+    props.setExibeLogin(false);
+    props.setExibeRestauracao(false);
   }
 
   const voltaAoInicio = () => {
     props.setExibePaginaPrincipal(true);
     props.setExibeRestauracao(false);
     props.setExibeLogin(false);
+    props.setExibeCriacao(false);
   }
 
   const abrePaginaDeLogin = () => {
     props.setExibePaginaPrincipal(false);
     props.setExibeRestauracao(false);
     props.setExibeLogin(true);
+    props.setExibeCriacao(false);
     setExibeLogin(false);
   }
 
@@ -50,7 +61,7 @@ function Header(props) {
         <h1 onClick={voltaAoInicio}>MAIA CUSTOM</h1>
         <ul className='nav-servicos'>
           <li><button onClick={exibeRestaurar}>Restaure uma peça</button></li>
-          <li><button>Crie uma peça</button></li>
+          <li><button onClick={exibeCriacao}>Crie uma peça</button></li>
           <li id='botao-login' onClick={controlaLogin}><button><img src="/img/icones/icone-usuario.png" alt="" />Entrar</button></li>
           {exibeLogin ?
             <div className='lista-login'>
